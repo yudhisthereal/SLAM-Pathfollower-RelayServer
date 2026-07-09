@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kmo-relayserver",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-09",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "BRIDGE_RELAY",
+        "class_name": "BridgeRelay"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["BridgeRelay"]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
