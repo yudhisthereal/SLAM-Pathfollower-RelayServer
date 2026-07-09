@@ -1,0 +1,15 @@
+# wrangler.toml
+name = "robot-relay"
+main = "src/index.js"
+compatibility_date = "2024-12-18"
+
+[[durable_objects.bindings]]
+name = "BRIDGE_RELAY"
+class_name = "BridgeRelay"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["BridgeRelay"]
+
+[vars]
+BRIDGE_TOKEN = "your_shared_secret_here"
