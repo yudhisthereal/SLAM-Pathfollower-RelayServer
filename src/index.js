@@ -106,7 +106,8 @@ export class BridgeRelay extends DurableObject {
           server.send(JSON.stringify({ type: 'error', message: 'Failed to deliver payload to bridge' }));
         }
       } else {
-        server.send(JSON.stringify({ type: 'error', message: 'Bridge is offline' }));
+        // Changed from 'error' to 'info' type
+        server.send(JSON.stringify({ type: 'info', message: 'Bridge is offline' }));
       }
     }
   }
